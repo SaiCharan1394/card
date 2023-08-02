@@ -64,12 +64,12 @@ class GitHub {
         <div class="row col col-lg-4">
           <div class="fw-bold">Repos : ${userData.public_repos}</div>
         </div>
-        <div class="row col-12">
+        <div class="row col-6">
           <div class=" fw-bold text-wrap">Twitter :${
             userData.twitter_username ? "@" + userData.twitter_username : "N/A"
           }</div>
         </div>
-        <div class="row col-12">
+        <div class="row col-6">
           <div class=" fw-bold">Location :${userData.location || "N/A"}</div>
         </div>
       </div>
