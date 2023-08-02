@@ -11,42 +11,81 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <div class="container mx-auto " style="height:100vh">
-      <div class="row bg-secondary overflow-hidden position-absolute top-50 start-50 translate-middle w-full rounded-4 p-4 " style="max-width: 1000px;" >
-        <div class="text-center col-12 col-lg-3 h-full bg-success align-items-center align-self-center">
-            <img src="test.jpg" width="100" height="100" class="rounded-circle ">
+    <div class="container mt-5">
+        <form id="form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="search"
+              placeholder="Enter User Id"
+            />
+          </div>
+        </form>
+        <div id="main" class="mt-5">
+          <!-- dynamically populate the card here -->
         </div>
-          
-        <div class="col-12 col-lg-9 row">
-          <h3 class="col-12">SaiCharan</h3>
-          <p class="col-12">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam
-            cupiditate quis dignissimos vero, voluptatum quos labore adipisci
-            veritatis aliquam earum est reprehenderit tenetur numquam. Totam
-            odit ut vero nihil tempora?
+      </div>
+      <script src="main.js"></script>
+    <div class="container vh-100 position-relative">
+        
+      <div
+        class="row bg-light shadow col-12 col-lg-9 mw-lg-50 p-3 mx-auto position-absolute top-50 start-50 translate-middle rounded-4 row-gap-3"
+      >
+        <div
+          class="col-12 col-lg-3 bg-success bg-opacity-50 text-center mx-auto my-auto rounded-4"
+        >
+          <img
+            src="test.jpg"
+            alt=""
+            class="border border-5 rounded-circle"
+            height="150px"
+            width="150px"
+          />
+        </div>
+        <div
+          class="row col-12 col-lg-9 text-center text-lg-start row-gap-3 mx-auto"
+        >
+          <h2>saicharan</h2>
+          <p class="fw-light">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+            tempora facilis. Natus provident, accusantium, laborum culpa nulla
+            eaque magni asperiores laboriosam sed facilis voluptates, minus et
+            similique. Rerum, quibusdam nulla.
           </p>
-          <div class="col d-flex flex-row justify-content-between flex-wrap " >
-            <div class="d-flex flex-row">
-                <div>Followers :</div>
-                <div>200</div>
+          <div class="row text-start justify-content-center mx-auto">
+            <div class="row col-6 col-lg-4">
+              <div class="col-9 fw-bold">Followers :</div>
+              <div class="col-3">10</div>
             </div>
-            <div class="d-flex flex-row">
-                <div>Following :</div>
-                <div>200</div>
+            <div class="row col-6 col-lg-4">
+              <div class="col-9 fw-bold">Following :</div>
+              <div class="col-3">10</div>
             </div>
-            <div class="d-flex flex-row">
-                <div>Repos :</div>
-                <div>200</div>
+            <div class="row col-6 col-lg-4">
+              <div class="col-9 fw-bold">Repos :</div>
+              <div class="col-3">10</div>
             </div>
-            <div class="d-flex flex-row">
-                <div>Twitter :</div>
-                <div>200</div>
+            <div class="row col-6 col-lg-4">
+              <div class="col-9 fw-bold">Twitter :</div>
+              <div class="col-3">10</div>
             </div>
-            <div class="d-flex flex-row">
-                <div>Location :</div>
-                <div>200</div>
+            <div class="row col-6 col-lg-4">
+              <div class="col-9 fw-bold">Location :</div>
+              <div class="col-3">10</div>
             </div>
           </div>
         </div>
