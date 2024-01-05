@@ -38,44 +38,63 @@ class GitHub {
   createUserCard(userData) {
     const main = document.getElementById("main");
     main.innerHTML = `
-            <div class="vh-100 position-relative">
-  <div class="row bg-light shadow col-12 col-lg-9 mw-lg-50 p-3 mx-auto position-absolute top-50 start-50 translate-middle rounded-4 row-gap-3">
-    <div class="col-12 col-lg-3 text-center mx-auto my-auto rounded-4">
-      <img
-        src="${userData.avatar_url}"
-        alt=""
-        class="border border-5 rounded-circle"
-        height="150px"
-        width="150px"
-      />
+    <div class="h-[400px] w-[827px] bg-black opacity-[85%] rounded-[20px] mx-auto mt-[50px] p-[48px] text-white grid grid-cols-3">
+    <div class="flex flex-col items-center justify-self-start">
+     <div class="h-[170px] w-[170px] rounded-[20px] border-[0.5px] border-white overflow-hidden">
+         <img
+     src="${userData.avatar_url}" class=""
+     alt=""
+   />
+     </div>
+     <h1 class="mt-[9px] text-[24px]  font-normal font-family capitalize">${userData.name || "N/A"}</h1>
     </div>
-    <div class="row col-12 col-lg-9 text-center text-lg-start row-gap-1 mx-auto">
-      <h2>${userData.name || "N/A"}</h2>
-      <p class="fw-light">
-      ${userData.bio || ""}
-      </p>
-      <div class="row mx-auto">
-        <div class="row col col-lg-4">
-          <div class="fw-bold">Followers : ${userData.followers}</div>
-        </div>
-        <div class="row col col-lg-4">
-          <div class="fw-bold">Following : ${userData.following}</div>
-        </div>
-        <div class="row col col-lg-4">
-          <div class="fw-bold">Repos : ${userData.public_repos}</div>
-        </div>
-        <div class="row col-6">
-          <div class=" fw-bold text-wrap">Twitter :${
-            userData.twitter_username ? "@" + userData.twitter_username : "N/A"
-          }</div>
-        </div>
-        <div class="row col-6">
-          <div class=" fw-bold">Location :${userData.location || "N/A"}</div>
-        </div>
-      </div>
+    <div class="col-span-2">
+     <div>
+     <div class="text-white text-sm font-bold font-['Montserrat']">Github Bio </div>
+     <div class="w-[413px] h-[50px] text-white text-xs font-normal font-['Montserrat']">${userData.bio || ""}</div>
+
+     </div>
+     <div class="grid grid-flow-col gap-[38px]">
+         <div class="w-[100px] h-[100px] relative  ">
+             <div class="w-[100px] h-[100px] left-0 top-0 absolute rounded-full border border-white grid place-content-center">
+                 <div class=" text-white text-sm font-normal font-['Montserrat'] ">Followers</div>
+             <div class=" text-white text-base font-bold font-['Montserrat'] text-center">${userData.followers}</div>
+             </div>
+           </div>
+           <div class="w-[100px] h-[100px] relative">
+             <div class="w-[100px] h-[100px] left-0 top-0 absolute rounded-full border border-white grid place-content-center">
+                 <div class=" text-white text-sm font-normal font-['Montserrat'] ">Repos</div>
+             <div class=" text-white text-base font-bold font-['Montserrat'] text-center">${userData.public_repos}</div>
+             </div>
+           </div>
+           <div class="w-[100px] h-[100px] relative">
+             <div class="w-[100px] h-[100px] left-0 top-0 absolute rounded-full border border-white grid place-content-center">
+                 <div class=" text-white text-sm font-normal font-['Montserrat'] ">Following</div>
+             <div class=" text-white text-base font-bold font-['Montserrat'] text-center">${userData.following}</div>
+             </div>
+           </div>
+     </div>
+     <div class="max-w-[463px]  h-[33px] text-white text-sm font-extralight font-['Montserrat'] mt-[21px]">Clean code always looks like it was written by someone who cares. — Robert C. Martin</div>
     </div>
-  </div>
-</div>
+    <div class="col-span-3 grid grid-flow-col mt-[26px] items-center">
+     <div class="w-[225px] h-[59px] relative ">
+         <div class="left-[63px] top-[19px] absolute text-white text-sm font-normal font-['Montserrat']">${
+             userData.twitter_username ? "@" + userData.twitter_username : "N/A"
+           }</div>
+         <div class="w-8 h-8 left-[14px] top-[13px] absolute bg-cyan-100 rounded-full grid place-content-center"><img src="assets/x-social-media-black-icon.png" class="w-4 h-4"></div>
+         <div class="w-[225px] h-[59px] left-0 top-0 absolute rounded-[33px] border border-white"></div>
+        </div>
+       <div class="w-[225px] h-[59px] relative">
+         <div class="left-[63px] top-[19px] absolute text-white text-sm font-normal font-['Montserrat']">${userData.location || "N/A"}</div>
+         <div class="w-8 h-8 left-[14px] top-[13px] absolute bg-cyan-100 rounded-full grid place-content-center"><img src="assets/maps-pin-black-icon.png" class="w-4 h-4"></div>
+         <div class="w-[225px] h-[59px] left-0 top-0 absolute rounded-[33px] border border-white"></div>
+       </div>
+       <div class="justify-self-end grid justify-items-center">
+         <div class="w-6 h-6 bg-white rounded-full"><img src="assets/github-icon.png"></div>
+         <div >github</div>
+       </div>
+    </div>
+ </div>
           `;
   }
 

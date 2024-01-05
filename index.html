@@ -4,37 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       * {
         font-family: "Poppins", sans-serif;
       }
     </style>
   </head>
-  <body>
-    <div class="container mt-5">
-        <form id="form">
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              id="search"
-              placeholder="Enter User Id"
-            />
-          </div>
-        </form>
+  <body class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+    <div class="p-8 ">
+        <div class="grid gap-y-[10px] justify-items-center">
+        <div class="text-white">Enter Your Github ID</div>
+        <input type="text" id="search" class=" max-w-[200px] px-[10px] py-[2px] bg-gray-100 border border-[2px] rounded-[20px] "/>
+        </div>
         <div id="main" class="mt-5">
           <!-- dynamically populate the card here -->
         </div>
